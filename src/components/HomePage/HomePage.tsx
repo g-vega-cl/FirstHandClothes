@@ -1,6 +1,5 @@
 import { useHits, SearchBox } from "react-instantsearch-hooks-web";
 import { ItemCard } from "../ItemCard";
-import { CheckoutForm } from "../StripeCheckout/CheckoutForm";
 import { FiltersModal } from "./FiltersModal";
 import "./homepage.css";
 
