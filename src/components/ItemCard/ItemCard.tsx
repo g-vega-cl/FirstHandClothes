@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Space } from "antd";
-import { IAlgoliaProductHit } from "../../interfaces/product";
+import { IAlgoliaProductHit } from "../../interfaces/algolia";
 import "./itemCard.css"
 
 export const ItemCard = ({
@@ -10,7 +10,7 @@ export const ItemCard = ({
   image,
   price,
 }: Partial<IAlgoliaProductHit>) => (
-  <Space size="small" style={{ marginBottom: "8px", padding: 5 }}>
+  <Space size="small" style={{ marginBottom: "8px" }}>
     <Card className="customAntCardBody" style={{ width: 300, padding: 5 }} cover={<img alt="example" src={image} height={250}/>} hoverable>
       <h2 style={{margin: 0}}>{name}</h2>
       <p style={{margin: 0}}>{description}</p>

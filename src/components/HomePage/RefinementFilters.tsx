@@ -1,36 +1,44 @@
 import { Select } from "antd";
+import { IAlgoliaRefinement } from "../../interfaces/algolia";
 
-const onChange = (value: string) => {
-  console.log(`selected ${value}`);
+export const RefinementFilter = ({
+  options,
+  setOptions,
+  placeholder,
+}: {
+  options: IAlgoliaRefinement[];
+  setOptions: React.Dispatch<React.SetStateAction<string>>
+  placeholder: string
+}) => {
+  const onTypeChange = (value: string) => {
+    setOptions(value)
+  };
+
+  const selectOptions = options.map((option) => {
+    return {
+      label: option.label,
+      value: option.value,
+    };
+  });
+
+  selectOptions.push({
+    value: "",
+    label: `All ${placeholder}`
+  })
+
+  return (
+    <div style={{ display: "flex" }}>
+      <Select
+        showSearch
+        placeholder={placeholder}
+        optionFilterProp="children"
+        onChange={onTypeChange}
+        filterOption={(input, option) =>
+          (option?.label ?? "").toLowerCase().includes(input.toLowerCase())
+        }
+        options={selectOptions}
+        style={{ width: "100%" }}
+      />
+    </div>
+  );
 };
-
-const onSearch = (value: string) => {
-  console.log("search:", value);
-};
-
-export const RefinementFilters = () => (
-  <Select
-    showSearch
-    placeholder="Select a person"
-    optionFilterProp="children"
-    onChange={onChange}
-    onSearch={onSearch}
-    filterOption={(input, option) =>
-      (option?.label ?? "").toLowerCase().includes(input.toLowerCase())
-    }
-    options={[
-      {
-        value: "jack",
-        label: "Jack",
-      },
-      {
-        value: "lucy",
-        label: "Lucy",
-      },
-      {
-        value: "tom",
-        label: "Tom",
-      },
-    ]}
-  />
-);
