@@ -37,7 +37,7 @@ export const FiltersModal = ({ hitNumber }: { hitNumber?: number }) => {
 
   useEffect(() => {
     if (allTypes.length < itemTypes.length) setAllTypes(itemTypes);
-  }, [itemTypes]);
+  }, [itemTypes.length, allTypes.length]);
 
   const showModal = () => {
     setIsModalOpen(true);
