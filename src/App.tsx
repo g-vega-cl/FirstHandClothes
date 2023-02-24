@@ -1,6 +1,6 @@
 import algoliasearch from "algoliasearch/lite";
 import { InstantSearch } from "react-instantsearch-hooks-web";
-import { HomePage } from "./components/HomePage";
+import { HomePage } from "./components/HomePage/HomePage";
 import { ErrorPage } from "./components/ErrorPage";
 
 function App() {

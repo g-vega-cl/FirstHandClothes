@@ -9,3 +9,9 @@
 
 ## Netlify
 1. Make sure to add your algolia key to netlify environment variables.
+
+
+
+# TODO 
+## Contentful
+1. As of now we are leveraging algolia for images, we want to set up contentful for more customization.
