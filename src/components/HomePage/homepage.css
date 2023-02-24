@@ -1,7 +1,8 @@
 .customAlgoliaSearchboxInput > input {
         width: 100%;
-        border-radius: 5px;
+        border-radius: 8px;
         border: 1px solid gray;
+        height: 30px;
 }
 
 .customAlgoliaSearchboxButton {

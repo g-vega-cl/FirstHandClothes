@@ -1,5 +1,5 @@
 import { Select } from "antd";
-import { IAlgoliaRefinement } from "../../interfaces/algolia";
+import { IAlgoliaRefinement } from "../../interfaces/algoliaTypes";
 
 export const RefinementFilter = ({
   options,

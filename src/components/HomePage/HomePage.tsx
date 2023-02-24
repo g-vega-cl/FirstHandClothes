@@ -1,17 +1,9 @@
-import { useState } from "react";
-import {
-  useConfigure,
-  useHits,
-  SearchBox,
-  useRefinementList,
-} from "react-instantsearch-hooks-web";
+import { useHits, SearchBox } from "react-instantsearch-hooks-web";
 import { ItemCard } from "../ItemCard";
 import { FiltersModal } from "./FiltersModal";
 import "./homepage.css";
 
 export const HomePage = () => {
-
-
   const { results } = useHits();
   return (
     <div style={{ padding: "50px" }}>
@@ -27,8 +19,12 @@ export const HomePage = () => {
         />
       </div>
       <div>
-      <FiltersModal />
+        <FiltersModal hitNumber={results?.nbHits}/>
       </div>
+      <div>
+        <p>{results?.nbHits} results</p>
+      </div>
+
       {results?.hits.map((hit: any) => {
         return (
           <ItemCard

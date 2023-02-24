@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Space } from "antd";
-import { IAlgoliaProductHit } from "../../interfaces/algolia";
+import { IAlgoliaProductHit } from "../../interfaces/algoliaTypes";
 import "./itemCard.css"
 
 export const ItemCard = ({
