@@ -63,7 +63,7 @@ export const FiltersModal = ({ hitNumber }: { hitNumber?: number }) => {
         onClick={showModal}
         style={{ marginBottom: "10px" }}
       >
-        Filters
+        Filter clothes
       </Button>
       <Button
         type="default"
