@@ -28,7 +28,12 @@ export const StripeDummyImageModal = ({
         width={"90vw"}
         style={{ height: "90vh" }}
       >
-        <img src={sourceimage} height={"100%"} width={"100%"} />
+        <img
+          alt="Error loading stripe"
+          src={sourceimage}
+          height={"100%"}
+          width={"100%"}
+        />
       </Modal>
     </>
   );
