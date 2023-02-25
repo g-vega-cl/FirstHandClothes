@@ -27,4 +27,5 @@
 1. As of now we are leveraging algolia for images, we want to set up contentful for more customization.
 
 # FAQ?
-## How do I add more clothes
+## How do I add more clothes?
+To add more clothes go to Algolia and find the clothes index. There you can click the `Add records` button
